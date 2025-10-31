@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSSeller - Your Online Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <a href="#" class="logo">JSSeller</a>
+            <div class="search-bar">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search products...">
+                <button class="search-btn btn-primary" id="searchBtn">Search</button>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary" id="loginBtn">Login</button>
+                <div class="cart-icon" id="cartIcon">
+                    🛒
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-tabs" id="categoryNav">
+            <div class="nav-tab active" data-category="all">All Products</div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Filters -->
+        <div class="filters" id="filters">
+            <button class="filter-btn active" data-sort="default">Default</button>
+            <button class="filter-btn" data-sort="price-low">Price: Low to High</button>
+            <button class="filter-btn" data-sort="price-high">Price: High to Low</button>
+            <button class="filter-btn" data-sort="rating">Top Rated</button>
+        </div>
+
+        <!-- Loading -->
+        <div class="loading" id="loading">Loading products...</div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid"></div>
+    </main>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content" id="modalContent">
+            <button class="modal-close" id="modalClose">×</button>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="modal-close" id="closeCart">×</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
