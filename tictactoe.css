@@ -1,0 +1,71 @@
+/* Page setup */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Title style */
+h1 {
+  margin-bottom: 10px;
+}
+
+/* Status line */
+#status {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+#turn {
+  font-weight: bold;
+}
+
+/* Board layout */
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 8px;
+}
+
+/* Individual cell styles */
+.cell {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 2.5em;
+  transition: background 0.3s;
+}
+.cell:hover {
+  background: #e2e8f0;
+}
+.cell.x {
+  color: #e63946;
+}
+.cell.o {
+  color: #457b9d;
+}
+
+/* Buttons panel */
+#controls {
+  margin-top: 20px;
+}
+#controls button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+#controls button:hover {
+  opacity: 0.8;
+}

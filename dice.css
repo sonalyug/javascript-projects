@@ -1,0 +1,86 @@
+/* Apply full dark background and vibrant accent colors */
+body {
+  background: #121212; 
+  color: #f0f0f0; 
+  font-family: Arial, sans-serif; /* Defines a clean, easy-to-read font for all text */
+  text-align: center; /* Centers all inline content like headings and buttons for balanced layout */
+  margin: 2rem; /* Adds spacing around the page edges equal to 2 times the root font size */
+}
+
+/* Main heading with accent glow */
+h1 {
+  color: #ffbb33; /* Sets a warm yellow-orange color to make the heading stand out vibrantly */
+  text-shadow: 0 0 10px rgba(255, 187, 51, 0.7); /* 
+                                                    Applies a soft glowing shadow behind the text:
+                                                    - 0px horizontal offset
+                                                    - 0px vertical offset
+                                                    - 10px blur radius
+                                                    - semi-transparent yellow-orange color for halo effect
+                                                    :contentReference[oaicite:2]{index=2} */
+  margin-bottom: 1.5rem; /* Adds spacing below the heading to visually separate it from content that follows */
+}
+
+/* Dice box style */
+.dice {
+  font-size: 6rem; /* Makes the dice character very large for emphasis and clear visibility */
+  margin: 1rem 0; /* Adds vertical spacing before and after the dice box */
+  display: inline-block; /* Allows margins, padding, and transforms to apply correctly around the dice */
+  padding: 1rem; /* Adds space inside the box so the dice doesn't touch the borders :contentReference[oaicite:3]{index=3} */
+  background: #1f1f1f; /* Sets a dark grey background for the dice container to differentiate from the page */
+  border: 3px solid #ffbb33; /* Outlines the dice box with a vibrant yellow-orange border to match the theme */
+  border-radius: 15px; /* Rounds the corners of the box to soften the visual and make it more inviting */
+  transition: transform 0.4s ease-in-out; /* 
+    Smoothly animates any change to the "transform" property (like rotation or scaling)
+    - over 0.4 seconds
+    - using an ease-in-out curve for natural acceleration and deceleration :contentReference[oaicite:4]{index=4} */
+  box-shadow: 0 0 20px rgba(255, 187, 51, 0.5); /* 
+    Adds a glowing effect around the dice box:
+    - centered glow (0px offsets)
+    - 20px spread for a soft halo
+    - semi-transparent yellow-orange color for ambiance */
+}
+
+/* Button with neon-style look */
+button {
+  padding: 1rem 2rem; /* 
+    Adds 1rem vertical and 2rem horizontal padding:
+    - creates a large clickable area
+    - balances text visually within the button :contentReference[oaicite:5]{index=5} */
+  font-size: 1.1rem; /* Makes button text slightly larger for readability */
+  background: #ffbb33; /* Sets the button background to vibrant yellow-orange, matching accent color */
+  color: #121212; /* Uses dark text on the button to contrast well with its light background */
+  border: none; /* Removes default button border for a cleaner, flat design */
+  border-radius: 8px; /* Slightly rounds button corners for a friendly feel */
+  cursor: pointer; /* Changes cursor to indicate the button is interactive */
+  box-shadow: 0 0 15px rgba(255, 187, 51, 0.6); /* 
+    Applies an outer glow around the button to resemble neon lighting:
+    - centered spread
+    - 15px blur
+    - slightly stronger opacity for brightness */
+  transition: background 0.2s; /* 
+    Smoothly animates changes in background color (e.g. hover transition)
+    over 0.2 seconds to create a subtle but visible effect :contentReference[oaicite:6]{index=6} */
+}
+button:hover {
+  background: #ffdd66; /* 
+    Lightens the button's background when hovered over to show visual feedback 
+    — transition above makes it animate smoothly */
+}
+
+/* Roll history list style */
+#roll-history {
+  list-style: none; /* Removes default bullet points for cleaner look */
+  padding: 0; /* Removes default padding for consistent spacing */
+  margin-top: 2rem; /* Adds space above the list to separate it from the button */
+  max-width: 360px; /* Restricts list width for optimal readability on large screens */
+  margin-left: auto; margin-right: auto; /* Centers the history list horizontally */
+}
+#roll-history li {
+  background: #1f1f1f; /* Dark grey background to match the dice container for consistent theme */
+  color: #f0f0f0; /* Light text color for high contrast inside each list item */
+  padding: 0.6rem; /* Comfortable spacing inside each item for readability :contentReference[oaicite:7]{index=7} */
+  margin-bottom: 0.4rem; /* Adds spacing between list items for visual separation */
+  border-left: 4px solid #ffbb33; /* 
+    Places a bold yellow border on the left of each item to visually tie into accent color */
+  border-radius: 4px; /* Rounds the corners of list items slightly to soften appearance */
+}
